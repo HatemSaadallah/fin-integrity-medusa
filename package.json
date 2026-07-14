@@ -1,0 +1,56 @@
+{
+  "name": "@fin-integrity/medusa",
+  "version": "0.1.0",
+  "description": "Medusa adapter for fin-integrity — capture order payments and refunds for reconciliation.",
+  "keywords": [
+    "fin-integrity",
+    "reconciliation",
+    "medusa",
+    "ecommerce",
+    "stripe",
+    "payments"
+  ],
+  "license": "MIT",
+  "author": "fin-integrity",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HatemSaadallah/fin-integrity-medusa.git"
+  },
+  "homepage": "https://github.com/HatemSaadallah/fin-integrity-medusa#readme",
+  "bugs": {
+    "url": "https://github.com/HatemSaadallah/fin-integrity-medusa/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@fin-integrity/node": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
